@@ -1,0 +1,11 @@
+{% load crispy_forms_tags %}
+<title>Complaint</title>
+<body style="">
+<div style="margin:150px 550px">
+<h1>---Complain---</h1>
+<form method='POST' action=".">{% csrf_token %}
+{{ form|crispy }}
+
+<center><input  type='submit' value='Submit' /></center>
+</div>
+</body>

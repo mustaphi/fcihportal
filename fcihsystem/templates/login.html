@@ -1,0 +1,14 @@
+{% load crispy_forms_tags %}
+<title>Login</title>
+<body style="">
+    <div style="margin:150px 550px">
+        <H1>-----LOG IN---</H1>
+        <form method='POST' action=".">{% csrf_token %}
+            {{ form|crispy }}
+            {% if msg %}
+            <p>{{msg}}</p>
+            {%endif%}
+            <center><input  type='submit' value='Sign Up' /></center>
+        </form>
+    </div>
+</body>

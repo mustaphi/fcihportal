@@ -1,0 +1,10 @@
+<div style="width:800px; margin:0 auto;">
+
+    <form method="post" action="{{ views.Register }}">{% csrf_token %}
+        {%for course in courses%}
+        <input type="checkbox"  name="{{course.Course_name}}" value="True" >{{course.Course_name}}</input><br>
+        {% endfor%}
+        <input type="submit" value="Register">
+    </form>
+    <br><a href="/login/complaint">Complain</a>
+</div>
